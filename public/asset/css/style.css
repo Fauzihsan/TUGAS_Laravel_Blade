@@ -1,0 +1,164 @@
+body{
+    background-color: whitesmoke;
+}
+
+.main{
+  transition: all .5s ease;
+  padding: 20px 50px;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+.col{
+  text-align: center;
+}
+
+#footer{
+  background-image: linear-gradient(to right, #192888, #4151c0);
+  padding:25px 10px;
+  color: white;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  position: fixed;
+}
+/* STYLE NAVBAR */
+.bg-dark{
+  background-image: linear-gradient(to right, #192888, #4151c0);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus{
+  color: white;
+}
+
+.navbar-brand{
+  margin-left: 50px;
+}
+.navbar-nav{
+  margin-right: 50px;
+}
+.nav-item{
+  margin: 0px 10px;
+}
+
+
+/* STYLE SIDEBAR */
+
+.sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  left: -250px;
+  margin-top: 2%;
+  background-image: linear-gradient(to right, #192888, #4151c0);
+  transition: all .5s ease;
+}
+  
+.sidebar header{
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-color: #202f8a;
+  line-height: 70px;
+  border-bottom: 2px solid rgb(9, 9, 75);
+  user-select: none;
+}
+  
+.sidebar ul li{
+  margin: 0;
+  padding: 0;
+  list-style: disc;
+  text-decoration: none;
+}
+
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 16px;
+  color: white;
+  padding-left: 25px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid black ;
+  transition: .5s;
+} 
+.sidebar ul a i{
+  margin-right: 20px;
+}
+  
+.sidebar ul li:hover a{
+  padding-left: 40px;
+  text-decoration: none;
+  background-color: rgb(83, 83, 197);
+}
+  
+#check{
+  display: none;
+}
+  
+label #btn, label #cancel{
+  position: absolute;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #192888, #4151c0);
+  border-radius: 5px;
+  transition: all .5s ease;
+}
+  
+label #btn{
+  left: 40px;
+  top: 70px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s ease;
+}
+  
+label #cancel{
+  z-index: 111;
+  left: -195px;
+  top: 60px;
+  font-size: 30px;
+  color: white;
+  padding: 4px 9px;
+  position: fixed;
+}
+  
+#check:checked ~ .sidebar{
+  left: 0;
+  box-shadow: 2px 2px 3px black;  
+}
+  
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+  
+#check:checked ~ .main{
+  margin-left: 250px;
+}
+
+/* REMOVE SIDEBAR ON MOBILE MODE */
+@media only screen and (max-width: 576px) {
+  label #btn, label #cancel{
+    display: none;
+  }
+  .sidebar{
+    display: none;
+  }
+}
+
+/* STYLE VIEW */
+#daftarBarang{
+  background-image: linear-gradient(to right, #192888, #4151c0);
+  text-align:center;
+  color: white;
+  margin-top: 2%;
+  border-radius: 5px;
+}
